@@ -53,7 +53,7 @@
   "TEST":
   {
     "db": {
-      "dbURL": "mongodb://localhost:27017/pfin"
+      "dbURL": "mongodb://54.154.195.158:27017/pfin"
     },
     "passport": {
       "google": {
