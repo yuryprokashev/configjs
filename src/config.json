@@ -4,38 +4,50 @@
       "dbURL": "mongodb://pfdb.edufun.me:27017/pfin"
     },
     "passport": {
-      "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
-      "GOOGLE_CLIENT_SECRET": "jB7uVkXia1IbvZbJPM7ZoFKD",
-      "callbackURL": "https://pf.edufun.me/auth/google/callback",
-      "authPATH": "/auth/google",
-      "authCallbackPATH": "/auth/google/callback",
-      "successAuthRedirectPATH": "/#/log-and-plan",
-      "failureAuthRedirectPATH": "/login",
-      "expressSessionSecret": "building MEAN apps is exciting!!",
-      "logoutURL": "/auth/logout",
+      "google": {
+        "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_SECRET": "jB7uVkXia1IbvZbJPM7ZoFKD",
+        "callbackURL": "https://pf.edufun.me/browser/auth/google/callback",
+        "authPATH": "/browser/auth/google",
+        "authCallbackPATH": "/browser/auth/google/callback",
+        "successAuthRedirectPATH": "/#/log-and-plan",
+        "failureAuthRedirectPATH": "/login",
+        "logoutURL": "/browser/auth/all/logout",
+        "scope": ["profile", "email"]
+      },
       "fb": {
         "FACEBOOK_APP_ID": "211916282554641",
         "FACEBOOK_APP_SECRET": "f23de4663f74fd67e812a33ccebfeb25",
-        "callbackURL": "https://pf.edufun.me/auth/facebook/callback",
-        "authPATH": "/auth/facebook",
-        "authCallbackPATH": "/auth/facebook/callback",
+        "callbackURL": "https://pf.edufun.me/browser/auth/facebook/callback",
+        "authPATH": "/browser/auth/facebook",
+        "authCallbackPATH": "/browser/auth/facebook/callback",
         "successAuthRedirectPATH": "/#/log-and-plan",
         "failureAuthRedirectPATH": "/login",
-        "expressSessionSecret": "i have a lot of money!",
-        "logoutURL": "/auth/facebook/logout"
+        "logoutURL": "/browser/auth/all/logout",
+        "profileFields": ["id", "first_name", "last_name", "gender", "picture", "emails", "hometown", "locale"],
+        "scope": ["email", "user_about_me"]
       }
     },
     "express": {
-      "port": 80
+      "port": 80,
+      "session": {
+        "secret": "I want a lot of money!"
+      }
     },
     "kafka": {
-      "hostURL": "54.154.226.55",
-      "hostName": "api-pfin-kafka-client",
-      "partitionerType": 2
+      "hostURL": "54.154.226.55"
     },
     "pusher": {
+      "host": "http://pf.edufun.me:50000",
       "port": 50000,
       "protocol": "http"
+    },
+    "bot": {
+      "hostUrl": "https://api.telegram.org",
+      "port": 443,
+      "contentType": "application/json",
+      "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
+      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/message"
     }
   },
   "TEST":
@@ -44,38 +56,50 @@
       "dbURL": "mongodb://localhost:27017/pfin"
     },
     "passport": {
-      "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
-      "GOOGLE_CLIENT_SECRET": "jB7uVkXia1IbvZbJPM7ZoFKD",
-      "callbackURL": "http://localhost:3000/auth/google/callback",
-      "authPATH": "/auth/google",
-      "authCallbackPATH": "/auth/google/callback",
-      "successAuthRedirectPATH": "/#/log-and-plan",
-      "failureAuthRedirectPATH": "/login",
-      "expressSessionSecret": "building MEAN apps is exciting!!",
-      "logoutURL": "/auth/logout",
-      "fb": {
+      "google": {
+        "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_SECRET": "jB7uVkXia1IbvZbJPM7ZoFKD",
+        "callbackURL": "http://localhost:3000/browser/auth/google/callback",
+        "authPATH": "/browser/auth/google",
+        "authCallbackPATH": "/browser/auth/google/callback",
+        "successAuthRedirectPATH": "/#/log-and-plan",
+        "failureAuthRedirectPATH": "/login",
+        "logoutURL": "/browser/auth/all/logout",
+        "scope": ["profile", "email"]
+      },
+      "facebook": {
         "FACEBOOK_APP_ID": "211916282554641",
         "FACEBOOK_APP_SECRET": "f23de4663f74fd67e812a33ccebfeb25",
-        "callbackURL": "http://localhost:3000/auth/facebook/callback",
+        "callbackURL": "http://localhost:3000/browser/auth/facebook/callback",
         "authPATH": "/auth/facebook",
         "authCallbackPATH": "/auth/facebook/callback",
         "successAuthRedirectPATH": "/#/log-and-plan",
         "failureAuthRedirectPATH": "/login",
-        "expressSessionSecret": "i have a lot of money!",
-        "logoutURL": "/auth/facebook/logout"
+        "logoutURL": "/browser/auth/all/logout",
+        "profileFields": ["id", "first_name", "last_name", "gender", "picture", "emails", "hometown", "locale"],
+        "scope": ["email", "user_about_me"]
       }
     },
     "express": {
-      "port": 3000
+      "port": 3000,
+      "session": {
+        "secret": "I want a lot of money!"
+      }
     },
     "kafka": {
-      "hostURL": "54.154.211.165",
-      "hostName": "api-pfin-kafka-client",
-      "partitionerType": 2
+      "hostURL": "54.154.211.165"
     },
     "pusher": {
+      "host": "http://localhost:50000",
       "port": 50000,
       "protocol": "http"
+    },
+    "bot": {
+      "hostUrl": "https://api.telegram.org",
+      "port": 443,
+      "contentType": "application/json",
+      "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
+      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/message"
     }
   }
 }
