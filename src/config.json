@@ -59,7 +59,7 @@
       "google": {
         "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
         "GOOGLE_CLIENT_SECRET": "jB7uVkXia1IbvZbJPM7ZoFKD",
-        "callbackURL": "http://54.154.195.158:3000/browser/auth/google/callback",
+        "callbackURL": "http://ec2-54-154-195-158.eu-west-1.compute.amazonaws.com:3000/browser/auth/google/callback",
         "authPATH": "/browser/auth/google",
         "authCallbackPATH": "/browser/auth/google/callback",
         "successAuthRedirectPATH": "/#/log-and-plan",
@@ -70,7 +70,7 @@
       "facebook": {
         "FACEBOOK_APP_ID": "211916282554641",
         "FACEBOOK_APP_SECRET": "f23de4663f74fd67e812a33ccebfeb25",
-        "callbackURL": "http://54.154.195.158:3000/browser/auth/facebook/callback",
+        "callbackURL": "http://ec2-54-154-195-158.eu-west-1.compute.amazonaws.com:3000/browser/auth/facebook/callback",
         "authPATH": "/auth/facebook",
         "authCallbackPATH": "/auth/facebook/callback",
         "successAuthRedirectPATH": "/#/log-and-plan",
