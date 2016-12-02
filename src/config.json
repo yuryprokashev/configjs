@@ -47,7 +47,7 @@
       "port": 443,
       "contentType": "application/json",
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
-      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/message"
+      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
     }
   },
   "TEST":
@@ -99,7 +99,7 @@
       "port": 443,
       "contentType": "application/json",
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
-      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/message"
+      "updateWebhook": "https://pftest.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
     }
   }
 }
