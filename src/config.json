@@ -43,7 +43,7 @@
       "protocol": "http"
     },
     "bot": {
-      "protocol": "https",
+      "protocol": "https:",
       "hostUrl": "https://api.telegram.org",
       "port": 443,
       "contentType": "application/json",
@@ -96,7 +96,7 @@
       "protocol": "http"
     },
     "bot": {
-      "protocol": "https",
+      "protocol": "https:",
       "hostUrl": "api.telegram.org",
       "port": 443,
       "contentType": "application/json",
