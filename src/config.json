@@ -1,6 +1,12 @@
 {
   "PROD":
   {
+<<<<<<< 3125f7cc07ee93eb00ad68470a09159b364ee29b
+=======
+    "db": {
+      "dbURL": "mongodb://172.31.37.222:27017/pfin"
+    },
+>>>>>>> mongo security
     "passport": {
       "google": {
         "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
