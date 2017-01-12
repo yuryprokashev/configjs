@@ -1,7 +1,7 @@
 {"PROD":
   {
     "db": {
-      "dbURL": "mongodb://172.31.37.222:27017/pfin"
+      "dbURL": "mongodb://pfdb.edufun.me:27017/pfin"
     },
     "passport": {
       "google": {
