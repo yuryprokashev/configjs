@@ -48,7 +48,21 @@
       "port": 443,
       "contentType": "application/json",
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
-      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
+      "updateWebhook": "https://pftest.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
+    },
+    "user": {
+      "db": {
+        "login": "userjs",
+        "pwd": "m#RD5>j>K.L([GgX",
+        "host": "172.31.37.222",
+        "port": 27017,
+        "authSource": "admin",
+        "authMechanism": "SCRAM-SHA-1"
+      },
+      "kafkaListeners": {
+        "findOne": "user-find-one-request",
+        "findOneAndUpdate": "user-find-one-and-update-request"
+      }
     }
   },
   "TEST":
@@ -102,6 +116,20 @@
       "contentType": "application/json",
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
       "updateWebhook": "https://pftest.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
+    },
+    "userjs": {
+      "db": {
+        "login": "userjs",
+        "pwd": "userjs",
+        "host": "localhost",
+        "port": 27017,
+        "authSource": "admin",
+        "authMechanism": "SCRAM-SHA-1"
+      },
+      "kafkaListeners": {
+        "findOne": "user-find-one-request",
+        "findOneAndUpdate": "user-find-one-and-update-request"
+      }
     }
   }
 }
