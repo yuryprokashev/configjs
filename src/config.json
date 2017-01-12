@@ -4,7 +4,7 @@
 <<<<<<< 3125f7cc07ee93eb00ad68470a09159b364ee29b
 =======
     "db": {
-      "dbURL": "mongodb://172.31.37.222:27017/pfin"
+      "dbURL": "mongodb://pfdb.edufun.me:27017/pfin"
     },
 >>>>>>> mongo security
     "passport": {
