@@ -63,6 +63,38 @@
         "findOne": "user-find-one-request",
         "findOneAndUpdate": "user-find-one-and-update-request"
       }
+    },
+    "messagejs": {
+      "db": {
+        "name": "message",
+        "login": "messagejs",
+        "pwd": "yZm9Qmw&@utNW{:",
+        "host": "172.31.37.222",
+        "port": 27017,
+        "authSource": "admin",
+        "authMechanism": "SCRAM-SHA-1"
+      },
+      "kafkaListeners": {
+        "createMessage": "create-message-request"
+      }
+    },
+    "payloadjs": {
+      "db": {
+        "name": "payload",
+        "login": "payloadjs",
+        "pwd": "[RgAG;E9>8^<m2UP",
+        "host": "172.31.37.222",
+        "port": 27017,
+        "authSource": "admin",
+        "authMechanism": "SCRAM-SHA-1"
+      },
+      "kafkaListeners": {
+        "createMessage": "create-message-response",
+        "getPayload": "get-payload-request",
+        "copyPayload": "copy-payload-request",
+        "clearPayload": "clear-payload-request",
+        "aggMonthData": "agg-month-data-request"
+      }
     }
   },
   "TEST":
@@ -144,6 +176,24 @@
       },
       "kafkaListeners": {
         "createMessage": "create-message-request"
+      }
+    },
+    "payloadjs": {
+      "db": {
+        "name": "payload",
+        "login": "payloadjs",
+        "pwd": "payloadjs",
+        "host": "localhost",
+        "port": 27017,
+        "authSource": "admin",
+        "authMechanism": "SCRAM-SHA-1"
+      },
+      "kafkaListeners": {
+        "createMessage": "create-message-response",
+        "getPayload": "get-payload-request",
+        "copyPayload": "copy-payload-request",
+        "clearPayload": "clear-payload-request",
+        "aggMonthData": "agg-month-data-request"
       }
     }
   }
