@@ -131,6 +131,20 @@
         "findOne": "user-find-one-request",
         "findOneAndUpdate": "user-find-one-and-update-request"
       }
+    },
+    "messagejs": {
+      "db": {
+        "name": "message",
+        "login": "messagejs",
+        "pwd": "messagejs",
+        "host": "localhost",
+        "port": 27017,
+        "authSource": "admin",
+        "authMechanism": "SCRAM-SHA-1"
+      },
+      "kafkaListeners": {
+        "createMessage": "create-message-request"
+      }
     }
   }
 }
