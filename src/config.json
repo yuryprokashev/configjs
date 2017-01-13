@@ -119,6 +119,7 @@
     },
     "userjs": {
       "db": {
+        "name": "user",
         "login": "userjs",
         "pwd": "userjs",
         "host": "localhost",
