@@ -1,8 +1,6 @@
-{"PROD":
+{
+  "PROD":
   {
-    "db": {
-      "dbURL": "mongodb://pfdb.edufun.me:27017/pfin"
-    },
     "passport": {
       "google": {
         "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
@@ -50,8 +48,9 @@
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
       "updateWebhook": "https://pftest.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
     },
-    "user": {
+    "userjs": {
       "db": {
+        "name": "user",
         "login": "userjs",
         "pwd": "m#RD5>j>K.L([GgX",
         "host": "172.31.37.222",
@@ -99,9 +98,6 @@
   },
   "TEST":
   {
-    "db": {
-      "dbURL": "mongodb://localhost:27017/pfin"
-    },
     "passport": {
       "google": {
         "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
