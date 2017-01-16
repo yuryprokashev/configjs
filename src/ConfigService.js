@@ -25,7 +25,7 @@ class ConfigService {
             // console.log(_this);
             function handleConfigRequest(msg){
                 // console.log(this);
-                // console.log(msg);
+                console.log(msg);
                 let message = JSON.parse(msg.value);
                 let response = {
                     requestId: message.requestId,
