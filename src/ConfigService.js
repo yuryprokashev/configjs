@@ -19,6 +19,7 @@ class ConfigService {
     }
     listen(){
         // console.log(this);
+        // TODO. Записать host в отдельный файл hosts
         var _this = this;
         this.bus = new KafkaAdapter(this.kafkaHost, this.serviceName, 2);
         this.bus.producer.on('ready', function (msg) {
