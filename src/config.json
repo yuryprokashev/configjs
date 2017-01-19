@@ -73,7 +73,7 @@
       "db": {
         "name": "message",
         "login": "messagejs",
-        "pwd": "yZm9Qmw&@utNW{:",
+        "pwd": "yZm9Qmw&FutNW{1",
         "host": "172.31.37.222",
         "port": 27017,
         "authSource": "admin",
