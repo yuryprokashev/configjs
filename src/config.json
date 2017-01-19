@@ -13,7 +13,7 @@
         "logoutURL": "/browser/auth/all/logout",
         "scope": ["profile", "email"]
       },
-      "fb": {
+      "facebook": {
         "FACEBOOK_APP_ID": "211916282554641",
         "FACEBOOK_APP_SECRET": "f23de4663f74fd67e812a33ccebfeb25",
         "callbackURL": "https://pf.edufun.me/browser/auth/facebook/callback",
