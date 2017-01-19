@@ -16,6 +16,7 @@ class ConfigService {
             console.log(result);
             return result;
         })(isProd);
+        this.isProd = isProd;
     }
     listen(){
         // console.log(this);
@@ -33,10 +34,10 @@ class ConfigService {
                     responsePayload:[],
                     responseErrors:[]
                 };
-                if(message.isProd === true){
+                if(this.isProd === 1){
                     response.responsePayload.push(_this.config.PROD);
                 }
-                else {
+                else if (this.isProd === 0) {
                     response.responsePayload.push(_this.config.TEST);
                 }
                 // console.log(response.responsePayload[0]);
