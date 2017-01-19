@@ -100,8 +100,8 @@
   {
     "passport": {
       "google": {
-        "GOOGLE_CLIENT_ID": "746362895265-vh9obqfi1vph4u18ue0q04tl8dg4c3p5.apps.googleusercontent.com",
-        "GOOGLE_CLIENT_SECRET": "jB7uVkXia1IbvZbJPM7ZoFKD",
+        "GOOGLE_CLIENT_ID": "746362895265-jogqun87k8s64pc6t2022tedstjnitg6.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_SECRET": "bmkMaEVEECLq_ThUIfHzLkcr",
         "callbackURL": "http://pftest.edufun.me/browser/auth/google/callback",
         "authPATH": "/browser/auth/google",
         "authCallbackPATH": "/browser/auth/google/callback",
