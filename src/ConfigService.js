@@ -34,10 +34,10 @@ class ConfigService {
                     responsePayload:[],
                     responseErrors:[]
                 };
-                if(this.isProd === 1){
+                if(_this.isProd === 1){
                     response.responsePayload.push(_this.config.PROD);
                 }
-                else if (this.isProd === 0) {
+                else if (_this.isProd === 0) {
                     response.responsePayload.push(_this.config.TEST);
                 }
                 // console.log(response.responsePayload[0]);
