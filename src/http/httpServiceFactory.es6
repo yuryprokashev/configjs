@@ -30,8 +30,8 @@ module.exports = (httpClient) => {
                     });
                     response.on('end', () => {
                         console.log(response);
-                        resolve(response);
                     });
+                    resolve(response);
                 });
             }
         );
