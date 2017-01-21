@@ -46,7 +46,7 @@
       "port": 443,
       "contentType": "application/json",
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
-      "updateWebhook": "https://pftest.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
+      "updateWebhook": "https://pf.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
     },
     "userjs": {
       "db": {
@@ -93,6 +93,20 @@
         "copyPayload": "copy-payload-request",
         "clearPayload": "clear-payload-request",
         "aggMonthData": "agg-month-data-request"
+      }
+    },
+    "configjs": {
+      "db": {
+        "name": null,
+        "login": null,
+        "pwd": null,
+        "host": null,
+        "port": null,
+        "authSource": null,
+        "authMechanism": null
+      },
+      "kafkaListeners": {
+        "getConfig": "get-config-request"
       }
     }
   },
@@ -142,8 +156,8 @@
       "hostUrl": "api.telegram.org",
       "port": 443,
       "contentType": "application/json",
-      "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
-      "updateWebhook": "https://pftest.edufun.me/bot-283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E/updates"
+      "token": "222259087:AAHYS1djaD6zqfa2qYS41xkxtOTexcOCbao",
+      "updateWebhook": "https://pftest.edufun.me/bot-222259087:AAHYS1djaD6zqfa2qYS41xkxtOTexcOCbao/updates"
     },
     "userjs": {
       "db": {
@@ -190,6 +204,20 @@
         "copyPayload": "copy-payload-request",
         "clearPayload": "clear-payload-request",
         "aggMonthData": "agg-month-data-request"
+      }
+    },
+    "configjs": {
+      "db": {
+        "name": null,
+        "login": null,
+        "pwd": null,
+        "host": null,
+        "port": null,
+        "authSource": null,
+        "authMechanism": null
+      },
+      "kafkaListeners": {
+        "getConfig": "get-config-request"
       }
     }
   }
