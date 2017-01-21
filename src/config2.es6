@@ -62,6 +62,7 @@ kafkaBus.producer.on('ready', ()=> {
     httpCtrl = httpCtrlFactory(httpService, tgConfig);
 
     tgConfigCtrl = telegramConfigCtrlFactory(httpCtrl);
+    console.log('that is nice');
     tgConfigCtrl.configureTelegram(tgConfig).then(
         (response) => {
             console.log(response.body);
