@@ -51,7 +51,7 @@ kafkaBus.producer.on('ready', ()=> {
 
     configCtrl = configCtrlFactory(configService, kafkaService);
 
-    kafkaListeners = configService.get(SERVICE_NAME, 'kafkaListeners');
+    kafkaListeners = configService.getServiceConfig(SERVICE_NAME, 'kafkaListeners');
 
     kafkaService.subscribe(kafkaListeners.getConfig, configCtrl.getAll);
 
