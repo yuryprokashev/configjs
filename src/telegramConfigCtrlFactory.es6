@@ -11,7 +11,7 @@ module.exports = httpCtrl => {
             (resolve, reject) => {
                 httpCtrl.setWebhook({url: config.updateWebhook}).then(
                     (response) => {
-                        console.log(response);
+                        // console.log(response);
                         resolve(response);
                     },
                     (error) => {

@@ -40,7 +40,7 @@ module.exports = (httpService, config) => {
             (resolve, reject) => {
                 httpService.post(path, message).then(
                     (response) => {
-                        console.log('httpService resolved');
+                        // console.log('httpService resolved');
                         resolve(response);
                     },
                     (error) => {

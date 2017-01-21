@@ -29,7 +29,7 @@ module.exports = (httpClient) => {
                         reject(error);
                     });
                     response.on('end', () => {
-                        console.log(response);
+                        console.log('response ended...');
                     });
                     resolve(response);
                 });
