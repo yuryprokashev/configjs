@@ -42,7 +42,7 @@
     },
     "bot": {
       "protocol": "https:",
-      "hostUrl": "https://api.telegram.org",
+      "hostUrl": "api.telegram.org",
       "port": 443,
       "contentType": "application/json",
       "token": "283721029:AAFcG5IWeemNqsW_-E3peO3O-elOSaKQ94E",
