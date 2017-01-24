@@ -9,7 +9,8 @@
   "author": "Yury Prokashev",
   "license": "ISC",
   "dependencies": {
-    "kafka-node": "^0.5.4"
+    "kafka-node": "^0.5.4",
+    "my-kafka": "file:../shared/myKafka"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
