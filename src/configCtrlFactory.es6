@@ -16,8 +16,10 @@ module.exports = (configService, kafkaService) => {
         // data = extractWriteData(kafkaMessage);
 
         result = configService.getAll();
-        context.response = result;
-        kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage, context));
+        if(context !== null) {
+            context.response = result;
+            kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage, context));
+        }
     };
 
     return configCtrl;
