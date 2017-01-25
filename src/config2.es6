@@ -47,7 +47,7 @@ kafkaService = kafkaServiceFactory(kafkaBus);
 kafkaBus.producer.on('ready', ()=> {
 
     configObject = configObjectFactory('config.json');
-    debugger;
+    console.log(JSON.stringify(configObject));
     configService = configServiceFactory(configObject, IS_PROD);
 
     configCtrl = configCtrlFactory(configService, kafkaService);
