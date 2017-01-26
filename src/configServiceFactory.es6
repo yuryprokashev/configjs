@@ -17,7 +17,7 @@ module.exports = (configObject, isProd) => {
         config = configObject.TEST;
     }
 
-    console.log(`ConfigService contains this ${JSON.stringify(config)}`)
+    // console.log(`ConfigService contains this ${JSON.stringify(config)}`)
 
     configService.getServiceConfig = (serviceName, property) => {
         if(property === undefined) {
