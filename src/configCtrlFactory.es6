@@ -16,10 +16,10 @@ module.exports = (configService, kafkaService) => {
         // data = extractWriteData(kafkaMessage);
 
         result = configService.getAll();
-        console.log(`current Config Object returned from Config Service  ${JSON.stringify(result)}`);
+        // console.log(`current Config Object returned from Config Service  ${JSON.stringify(result)}`);
         if(context !== null) {
             context.response = result;
-            kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage, context));
+            kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage), context);
         }
     };
 
