@@ -54,7 +54,7 @@ kafkaBus.producer.on('ready', ()=> {
 
     kafkaListeners = configService.getServiceConfig(SERVICE_NAME, 'kafkaListeners');
 
-    kafkaService.subscribe(kafkaListeners.getConfig, configCtrl.getAll);
+    kafkaService.subscribe(kafkaListeners.getConfig, false, configCtrl.getAll);
 
     tgConfig = configService.getServiceConfig('bot');
 
