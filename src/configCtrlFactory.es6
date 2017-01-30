@@ -19,7 +19,7 @@ module.exports = (configService, kafkaService) => {
         // console.log(`current Config Object returned from Config Service  ${JSON.stringify(result)}`);
         if(context !== null) {
             context.response = result;
-            kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage), context);
+            kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage), false, context);
         }
     };
 
