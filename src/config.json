@@ -152,7 +152,10 @@
     "pusher": {
       "host": "http://54.154.195.158:50000",
       "port": 50000,
-      "protocol": "http"
+      "protocol": "http",
+      "kafkaListeners": {
+        "notifyPayloadCreated": "create-message-response-processed"
+      }
     },
     "bot": {
       "protocol": "https:",
