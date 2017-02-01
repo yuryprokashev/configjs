@@ -38,7 +38,10 @@
     "pusher": {
       "host": "http://pf.edufun.me:50000",
       "port": 50000,
-      "protocol": "http"
+      "protocol": "http",
+      "kafkaListeners": {
+        "notifyPayloadCreated": "create-message-response-processed"
+      }
     },
     "bot": {
       "protocol": "https:",
