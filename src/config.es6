@@ -38,8 +38,7 @@ let configCtrl,
     tgConfigCtrl,
     httpCtrl;
 
-let kafkaListeners,
-    tgConfig;
+let tgConfig;
 
 kafkaBus = kafkaBusFactory(kafkaHost, SERVICE_NAME);
 kafkaService = kafkaServiceFactory(kafkaBus);
@@ -47,14 +46,12 @@ kafkaService = kafkaServiceFactory(kafkaBus);
 kafkaBus.producer.on('ready', ()=> {
 
     configObject = configObjectFactory('config.json');
-    // console.log(JSON.stringify(configObject));
+
     configService = configServiceFactory(configObject, IS_PROD);
 
     configCtrl = configCtrlFactory(configService, kafkaService);
 
-    kafkaListeners = configService.getServiceConfig(SERVICE_NAME, 'kafkaListeners');
-
-    kafkaService.subscribe(kafkaListeners.getConfig, false, configCtrl.getAll);
+    //TODO. Refactor this, so I just create Ctrl, and it does internally all operations
 
     tgConfig = configService.getServiceConfig('bot');
 

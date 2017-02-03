@@ -6,22 +6,38 @@ module.exports = (configService, kafkaService) => {
 
     let configCtrl = {};
 
-    configCtrl.getAll = (kafkaMessage) => {
-        let context, query, data;
+    let kafkaListeners;
 
-        let result;
+    let replyConfig,
+        registerServiceHost;
+
+    registerServiceHost = (serviceEnvObject) => {
+        //TODO. implement save ip address to file
+    };
+
+    replyConfig = (kafkaMessage) => {
+        let context;
 
         context = kafkaService.extractContext(kafkaMessage);
-        // query = extractQuery(kafkaMessage);
-        // data = extractWriteData(kafkaMessage);
 
-        result = configService.getAll();
-        // console.log(`current Config Object returned from Config Service  ${JSON.stringify(result)}`);
+        registerServiceHost(context);
+
         if(context !== null) {
-            context.response = result;
-            kafkaService.send(kafkaService.makeResponseTopic(kafkaMessage), false, context);
+            let topic,
+                isSignedRequest;
+
+            topic = kafkaService.makeResponseTopic(kafkaMessage);
+            isSignedRequest = false;
+            context.response = configService.getAll();
+
+            kafkaService.send(topic, isSignedRequest, context);
         }
+
     };
+
+    kafkaListeners = configService.getServiceConfig('configjs', 'kafkaListeners');
+
+    kafkaService.subscribe(kafkaListeners.getConfig, false, replyConfig);
 
     return configCtrl;
 };
