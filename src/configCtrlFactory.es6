@@ -19,25 +19,21 @@ module.exports = (configService, kafkaService) => {
         let context;
 
         context = kafkaService.extractContext(kafkaMessage);
+        if(context.error !== undefined) {console.error(context.error)}
 
         registerServiceHost(context);
 
-        if(context !== null) {
-            let topic,
-                isSignedRequest;
+        let topic;
+        topic = kafkaService.makeResponseTopic(kafkaMessage);
+        context.response = configService.getAll();
 
-            topic = kafkaService.makeResponseTopic(kafkaMessage);
-            isSignedRequest = false;
-            context.response = configService.getAll();
-
-            kafkaService.send(topic, isSignedRequest, context);
-        }
+        kafkaService.send(topic, context);
 
     };
 
     kafkaListeners = configService.getServiceConfig('configjs', 'kafkaListeners');
 
-    kafkaService.subscribe(kafkaListeners.getConfig, false, replyConfig);
+    kafkaService.subscribe(kafkaListeners.getConfig, replyConfig);
 
     return configCtrl;
 };
