@@ -16,6 +16,8 @@ let kafkaHost = (function(bool){
     return result;
 })(IS_PROD);
 
+const EventEmitter = require('events').EventEmitter;
+
 const kafkaBusFactory = require('my-kafka').kafkaBusFactory;
 const kafkaServiceFactory = require('my-kafka').kafkaServiceFactory;
 const configObjectFactory = require('./configObjectFactory.es6');
@@ -40,8 +42,8 @@ let configCtrl,
 
 let tgConfig;
 
-kafkaBus = kafkaBusFactory(kafkaHost, SERVICE_NAME);
-kafkaService = kafkaServiceFactory(kafkaBus);
+kafkaBus = kafkaBusFactory(kafkaHost, SERVICE_NAME, EventEmitter);
+kafkaService = kafkaServiceFactory(kafkaBus, EventEmitter);
 
 kafkaBus.producer.on('ready', ()=> {
 
@@ -50,8 +52,6 @@ kafkaBus.producer.on('ready', ()=> {
     configService = configServiceFactory(configObject, IS_PROD);
 
     configCtrl = configCtrlFactory(configService, kafkaService);
-
-    //TODO. Refactor this, so I just create Ctrl, and it does internally all operations
 
     tgConfig = configService.getServiceConfig('bot');
 
