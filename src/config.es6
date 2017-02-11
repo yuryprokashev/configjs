@@ -53,6 +53,8 @@ kafkaBus.producer.on('ready', ()=> {
 
     configCtrl = configCtrlFactory(configService, kafkaService);
 
+    configCtrl.start();
+
     tgConfig = configService.getServiceConfig('bot');
 
     httpClient = httpClientFactory(tgConfig);

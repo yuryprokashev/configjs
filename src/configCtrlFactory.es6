@@ -11,8 +11,9 @@ module.exports = (configService, kafkaService) => {
     let replyConfig,
         registerServiceHost;
 
-    registerServiceHost = (serviceEnvObject) => {
+    registerServiceHost = (context) => {
         //TODO. implement save ip address to file
+        console.log(context);
     };
 
     replyConfig = (kafkaMessage) => {
@@ -31,9 +32,11 @@ module.exports = (configService, kafkaService) => {
 
     };
 
-    kafkaListeners = configService.getServiceConfig('configjs', 'kafkaListeners');
+    configCtrl.start = () => {
+        kafkaListeners = configService.getServiceConfig('configjs', 'kafkaListeners');
 
-    kafkaService.subscribe(kafkaListeners.getConfig, replyConfig);
+        kafkaService.subscribe(kafkaListeners.getConfig, replyConfig);
+    };
 
     return configCtrl;
 };
