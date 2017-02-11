@@ -23,7 +23,7 @@ module.exports = (configService, kafkaService) => {
         if(context instanceof Error) {
             console.error(context);
         }
-        else if(context instanceof String) {
+        else if(typeof context === 'string') {
             console.log(kafkaMessage);
         }
         else {
