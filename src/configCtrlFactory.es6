@@ -13,7 +13,7 @@ module.exports = (configService, kafkaService) => {
 
     registerServiceHost = (context) => {
         //TODO. implement save ip address to file
-        console.log(`this is host to register in future ${context}`);
+        console.log(`this is host to register in future ${JSON.stringify(context)}`);
     };
 
     replyConfig = (kafkaMessage) => {
